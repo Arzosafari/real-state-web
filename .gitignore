@@ -1,0 +1,14 @@
+# Local environments and build output
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Data and artifacts are never committed (see docs/OPERATIONS.md)
+data/raw/
+models/
+reports/runs/

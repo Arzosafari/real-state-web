@@ -1,0 +1,11 @@
+# Allowlist: only files the API image needs enter the build context.
+# Raw data, reports, artifacts and secrets must never be included.
+
+*
+!requirements.lock
+!pyproject.toml
+!README.md
+!src
+!src/**
+!configs
+!configs/**
