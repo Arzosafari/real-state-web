@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Sticky navigation must never hide the section it links to. */
+    scroll-padding-top: 6.5rem;
+  }
+
+  body {
+    @apply bg-soft font-sans text-base leading-relaxed text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-serif font-normal tracking-tight;
+    text-wrap: balance;
+  }
+
+  h1 {
+    @apply text-4xl leading-[1.05] sm:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl leading-[1.1] sm:text-4xl lg:text-[2.75rem];
+  }
+
+  h3 {
+    @apply text-xl leading-snug sm:text-2xl;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  a {
+    @apply transition-colors duration-base;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.gold');
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: theme('colors.gold');
+    color: #fff;
+  }
+}
+
+@layer components {
+  /* Small uppercase section label with the hairline rule used throughout. */
+  .eyebrow {
+    @apply font-sans text-[0.68rem] font-medium uppercase tracking-label text-gold;
+  }
+
+  .rule {
+    @apply block h-px w-12 bg-gold/60;
+  }
+
+  .shell {
+    @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-12;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 border px-6 py-3 font-sans text-[0.7rem] font-medium uppercase tracking-label transition-all duration-base;
+  }
+
+  .btn-gold {
+    @apply btn border-gold bg-gold text-white hover:bg-gold-deep hover:border-gold-deep;
+  }
+
+  .btn-outline-light {
+    @apply btn border-white/45 text-white hover:border-white hover:bg-white/10;
+  }
+
+  .btn-outline-dark {
+    @apply btn border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-white;
+  }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-2 font-sans text-[0.7rem] font-medium uppercase tracking-label;
+  }
+
+  .card-hover img {
+    @apply transition-transform duration-500 ease-out;
+  }
+
+  .card-hover:hover img {
+    @apply scale-[1.03];
+  }
+
+  .field-label {
+    @apply mb-2 block font-sans text-[0.68rem] font-medium uppercase tracking-label text-ink/70;
+  }
+
+  .field-control {
+    @apply w-full border border-hairline bg-white px-4 py-3 font-sans text-sm text-ink placeholder:text-warmgray/70 focus:border-gold focus:outline-none;
+  }
+
+  .prose-editorial {
+    @apply max-w-prose space-y-5 text-[1.02rem] leading-[1.75] text-ink/80;
+  }
+
+  .prose-editorial h2 {
+    @apply pt-4 text-2xl text-ink;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
