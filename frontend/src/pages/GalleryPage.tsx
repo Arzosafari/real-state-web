@@ -44,7 +44,7 @@ export function GalleryPage() {
             Interiors, Place.
           </>
         }
-        copy="A cross-section of the studio's work. Every image here is an illustrative placeholder until real photography is supplied."
+        copy="A cross-section of the studio's work, illustrated with licensed stock photography until project photography is supplied."
         compact
       />
 

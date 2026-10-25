@@ -32,7 +32,7 @@ export function Philosophy() {
           <div className="overflow-hidden">
             <Img
               src={philosophy?.image ?? '/images/philosophy/terrace-pavilion.jpg'}
-              alt="Contemporary terrace pavilion with timber screens and a reflecting pool"
+              alt="Rooftop garden with planted beds, a timber pergola and city buildings beyond"
               ratio="4 / 3"
             />
           </div>

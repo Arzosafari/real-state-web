@@ -21,7 +21,7 @@ export function Hero() {
       <div className="absolute inset-0">
         <Img
           src={hero?.image ?? '/images/hero/hero-dusk.jpg'}
-          alt="Contemporary residential development at dusk, with the city beyond"
+          alt="City skyline at dusk seen across the water, lights coming on in the towers"
           className="h-full w-full"
           wrapperClassName="h-full w-full"
           ratio="16 / 9"
